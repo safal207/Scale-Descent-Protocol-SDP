@@ -1,0 +1,4 @@
+{"event_id":"event-001","task_id":"demo-task-001","scale":"Macro","decision":"Proceed","timestamp":"2026-05-08T00:00:01Z","evidence_ids":["E1"],"reason":"Visible output satisfies the macro task."}
+{"event_id":"event-002","task_id":"demo-task-001","scale":"Micro","decision":"Hold","timestamp":"2026-05-08T00:00:02Z","evidence_ids":[],"reason":"Causal ancestry requires deeper inspection."}
+{"event_id":"event-003","task_id":"demo-task-001","scale":"Pico","decision":"Hold","timestamp":"2026-05-08T00:00:03Z","evidence_ids":["E2"],"reason":"Referenced anchor is missing."}
+{"event_id":"event-004","task_id":"demo-task-001","scale":"Collapse","decision":"Commit","timestamp":"2026-05-08T00:00:04Z","evidence_ids":["E2","E3"],"reason":"Evidence supports the missing-anchor hypothesis."}
