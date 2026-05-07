@@ -1,0 +1,11 @@
+[package]
+name = "sdp-core"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Core types and validation logic for the Scale Descent Protocol."
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
+thiserror = "1"
