@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/sdp-core",
+    "crates/sdp-cli"
+]
+resolver = "2"
