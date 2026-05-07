@@ -1,0 +1,47 @@
+{
+  "task": {
+    "task_id": "demo-task-001",
+    "goal": "Find why an apparently valid agent output has invalid causal ancestry",
+    "required_scale": "Pico",
+    "context": "The final answer looked correct, but the trace may contain an invalid causal transition.",
+    "created_at": "2026-05-08T00:00:00Z"
+  },
+  "current_scale": "Pico",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "description": "The output is valid and the trace ancestry is intact.",
+      "prior": 0.2,
+      "evidence": [
+        {
+          "evidence_id": "E1",
+          "source": "output_check",
+          "claim": "The visible answer satisfies the user request.",
+          "confidence": 0.7,
+          "scale": "Macro"
+        }
+      ]
+    },
+    {
+      "id": "H3",
+      "description": "The output is useful, but a pico-level anchor is missing before commit.",
+      "prior": 0.35,
+      "evidence": [
+        {
+          "evidence_id": "E2",
+          "source": "trace:event-003",
+          "claim": "The commit transition references an anchor that is absent from the trace.",
+          "confidence": 0.93,
+          "scale": "Pico"
+        },
+        {
+          "evidence_id": "E3",
+          "source": "trace:event-004",
+          "claim": "Execute occurred after a commit that was not causally admissible.",
+          "confidence": 0.91,
+          "scale": "Micro"
+        }
+      ]
+    }
+  ]
+}
