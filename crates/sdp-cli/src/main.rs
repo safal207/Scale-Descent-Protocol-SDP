@@ -2,8 +2,7 @@ use std::{fs, path::PathBuf};
 
 use anyhow::Context;
 use clap::{Parser, Subcommand};
-use sdp_core::{collapse_hypotheses, Hypothesis, ScaleLevel, SdpTask};
-use serde::Deserialize;
+use sdp_core::{collapse_hypotheses, DescentRun};
 
 #[derive(Debug, Parser)]
 #[command(name = "sdp")]
@@ -16,13 +15,6 @@ struct Cli {
 #[derive(Debug, Subcommand)]
 enum Command {
     Inspect { file: PathBuf },
-}
-
-#[derive(Debug, Deserialize)]
-struct DescentRun {
-    task: SdpTask,
-    current_scale: ScaleLevel,
-    hypotheses: Vec<Hypothesis>,
 }
 
 fn main() -> anyhow::Result<()> {
