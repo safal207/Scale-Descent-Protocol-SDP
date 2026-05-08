@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sdp.dev/schemas/micro-agent-contract.schema.json",
+  "title": "SDP Micro Agent Contract",
+  "type": "object",
+  "required": ["agent_id", "scale", "mission", "input_scope", "permissions", "max_steps", "trace_required"],
+  "additionalProperties": false,
+  "properties": {
+    "agent_id": { "type": "string", "minLength": 1 },
+    "scale": {
+      "type": "string",
+      "enum": ["Macro", "Meso", "Micro", "Pico", "Collapse"]
+    },
+    "mission": { "type": "string", "minLength": 1 },
+    "input_scope": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Read", "Inspect", "Simulate", "ProposePatch", "Execute"]
+      },
+      "uniqueItems": true
+    },
+    "max_steps": { "type": "integer", "minimum": 1 },
+    "trace_required": { "type": "boolean" }
+  }
+}
