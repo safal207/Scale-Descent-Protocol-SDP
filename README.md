@@ -11,6 +11,7 @@ SDP explores the opposite direction:
 ## Review links
 
 - Start here: [`docs/START_HERE.md`](docs/START_HERE.md)
+- Five-minute CLI demo: [`docs/demo/FIVE_MINUTE_CLI_DEMO.md`](docs/demo/FIVE_MINUTE_CLI_DEMO.md)
 - Community reflection: [Issue #1](https://github.com/safal207/Scale-Descent-Protocol-SDP/issues/1)
 - Validation: `cargo test --workspace`
 - CLI demo: `cargo run -p sdp-cli -- inspect examples/simple_descent.json`
