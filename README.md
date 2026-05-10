@@ -8,6 +8,13 @@ SDP explores the opposite direction:
 
 > Agents should also scale downward — from macro goals into micro and pico causal transitions — before committing to action.
 
+## Review links
+
+- Start here: [`docs/START_HERE.md`](docs/START_HERE.md)
+- Community reflection: [Issue #1](https://github.com/safal207/Scale-Descent-Protocol-SDP/issues/1)
+- Validation: `cargo test --workspace`
+- CLI demo: `cargo run -p sdp-cli -- inspect examples/simple_descent.json`
+
 ## Core Idea
 
 A task can look correct at the output level while being invalid at the causal level.
